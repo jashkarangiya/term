@@ -19,6 +19,10 @@
             --size: 1.4;
         }
     </style>
+    <input id="enterDemo" type="text" onkeypress="return
+    open(event)" />
+    <script>
+    </script>
     <script>
         $('body').terminal({
             hello: function(what) {
@@ -32,9 +36,17 @@
             dir: function(){
             this.echo('All folders:\n Semesters')
             },
-            open: function(vr1){
-            
+          
+            open: function(event) {
+            if (event.keyCode == 13) {
+                console.log("Enter key is pressed");
+                return true;
             }
+            else{
+                return false;
+            }
+        }
+
         
         },
 
