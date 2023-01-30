@@ -19,10 +19,10 @@
             --size: 1.4;
         }
     </style>
-    <input id="enterDemo" type="text" onkeypress="return
+    <input onkeypress="return
     open(event)" />
-    <script>
-    </script>
+    
+ 
     <script>
         $('body').terminal({
             hello: function(what) {
@@ -38,10 +38,12 @@
             },
           
             open: function(event) {
+                this.echo('key pressed'+ event);    
+
             if (event.keyCode == 13) {
-                console.log("Enter key is pressed");
-                // location.href = event;
-                
+                this.echo('key pressed'+ event);
+                window.location.href = event
+             
 
                 return true;
             }
