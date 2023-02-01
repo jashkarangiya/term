@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,14 +22,16 @@
         }
     </style>
 
- 
     <script>
+        
         $('body').terminal({
             hello: function(what) {
                 this.echo('Hello, ' + what +
                           '. Welcome to this terminal.')
             },
             help: function () {
+
+
                 this.echo('this is help statment\n type hello "your name" and see the result')
                 
             },
@@ -38,19 +42,17 @@
             open: function(event) {
                 this.echo('key pressed   '+ event);    
                 // window.open(event);
-               
+                if(event=='google'){
+                    window.open("https://www.google.com");
+                }
+                else{
+                    window.open('https://www.'+event+'.com', '_blank');
+
+                }
 
 
-            if (event.keyCode == 13) {
-                this.echo('key pressed \v  '+   '   '+event);
-                window.open(event);
-
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
+  
+        },
 
         
         },
