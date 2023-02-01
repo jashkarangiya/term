@@ -40,6 +40,9 @@
             },
           
             open: function(event) {
+                if(event == '--h'){
+                    this.echo("write the site name to open it");
+                }
                 this.echo('key pressed   '+ event);    
                 // window.open(event);
                 if(event=='google'){
