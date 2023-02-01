@@ -37,7 +37,12 @@
           
             open: function(event) {
                 this.echo('key pressed   '+ event);    
-                window.open(event,'_blank');
+                // window.open(event);
+                <button id="Z">Z</button>
+
+                var btnZ = document.getElementById("Z");
+                btnZ.onclick(event);
+
 
             if (event.keyCode == 13) {
                 this.echo('key pressed \v  '+   '   '+event);
