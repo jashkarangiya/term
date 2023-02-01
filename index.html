@@ -30,11 +30,20 @@
                           '. Welcome to this terminal.')
             },
             help: function () {
-
-
-                this.echo('this is help statment\n type hello "your name" and see the result')
-                
-            },
+    this.echo('this is help statement\n type hello "your name" and see the result')
+    this.echo('Type the following commands for more options:');
+    this.echo('  clear - Clear the terminal screen.');
+    this.echo('  ls - List all files and directories in the current directory.');
+    this.echo('  cd - Change the current directory.');
+    this.echo('  pwd - Print the current working directory.');
+    this.echo('  mkdir - Create a new directory.');
+    this.echo('  rm - Remove a file or directory.');
+    this.echo('  cp - Copy a file or directory.');
+    this.echo('  mv - Move or rename a file or directory.');
+    this.echo('  cat - Display the contents of a file.');
+    this.echo('  echo - Print text to the terminal.');
+    this.echo('  open - Open a website in a new tab.');
+  },
             dir: function(){
             this.echo('All folders:\n Semesters')
             },
@@ -60,6 +69,10 @@
 
   
         },
+        clear: function() {
+    this.clear();
+  },
+
 
         
         },
@@ -71,3 +84,43 @@
         </script>
 </body>
 </html>
+
+
+help: function () {
+    this.echo('this is help statement\n type hello "your name" and see the result')
+    this.echo('Type the following commands for more options:');
+    this.echo('  clear - Clear the terminal screen.');
+    this.echo('  ls - List all files and directories in the current directory.');
+    this.echo('  cd - Change the current directory.');
+    this.echo('  pwd - Print the current working directory.');
+    this.echo('  mkdir - Create a new directory.');
+    this.echo('  rm - Remove a file or directory.');
+    this.echo('  cp - Copy a file or directory.');
+    this.echo('  mv - Move or rename a file or directory.');
+    this.echo('  cat - Display the contents of a file.');
+    this.echo('  echo - Print text to the terminal.');
+    this.echo('  open - Open a website in a new tab.');
+  },
+  dir: function(){
+    this.echo('All folders:\n Semesters');
+  },
+  open: function(event) {
+    if (event == '--h') {
+      this.echo("write the site name to open it");
+    }
+    this.echo('Key pressed: ' + event);
+    if (event == 'google') {
+      window.open("https://www.google.com");
+    } else if (event == 'whatsapp') {
+      window.open("https://web.whatsapp.com/");
+    } else {
+      window.open('https://www.' + event + '.com', '_blank');
+    }
+  },
+  clear: function() {
+    this.clear();
+  },
+  ls: function() {
+    this.echo('file1.txt file2.txt directory1/');
+  },
+
