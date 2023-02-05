@@ -55,9 +55,7 @@
             },
 
             open: function (event) {
-                if (event == '--h') {
-                    this.echo("write the site name to open it");
-                }
+             
                 this.echo('key pressed   ' + event);
                 // window.open(event);
                 if (event == 'google') {
@@ -69,6 +67,9 @@
                 }
                 else if (event == 'stngs') {
                     window.open("app://settings");
+                }
+                else if (event == 'h') {
+                    this.echo("write the site name to open it");
                 }
                 else {
                     window.open('https://www.' + event + '.com', '_blank');
@@ -104,6 +105,9 @@
                     this.echo("please write the correct name");
                 }
 
+            },
+            exit:function(){
+                window.close();
             }
 
 
