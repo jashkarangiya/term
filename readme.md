@@ -1,4 +1,4 @@
-Terminal for Everyone
+# Terminal for Everyone
 
 This is a web-based terminal-like interface built using the jQuery Terminal plugin. The code includes two JavaScript files, jquery-3.3.1.min.js and jquery.terminal.min.js, as well as a CSS file jquery.terminal.min.css that are imported from external sources.
 Features
@@ -13,7 +13,7 @@ Features
         git - Opens the GitHub profile of a specific user.
         exit - Closes the terminal window.
 
-Usage
+# Usage
 
 To use this terminal, simply open the HTML file in a web browser. The terminal will display a greeting message and you can start using the custom commands by typing them in the terminal prompt.
 Contributions
