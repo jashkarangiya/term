@@ -26,11 +26,15 @@
     <script>
 
         $('body').terminal({
+            hi: function(){
+
+                this.echo('just testing');
+            },
             hello: function (what) {
                 this.echo('Hello, ' + what +
                     '. Welcome to this terminal.')
             },
-            docs: function(){
+            docs: function () {
                 this.echo('this shows the documentation');
                 this.echo("This is an HTML code that creates a web-based terminal-like interface. The code includes two JavaScript files, jquery-3.3.1.min.js and jquery.terminal.min.js, as well as a CSS file jquery.terminal.min.css that are imported from external sources.The body tag contains a terminal function created using the jQuery Terminal plugin that defines several custom commands for the terminal interface.\n The following is a list of the custom commands defined in the code:\nhello: Echoes a greeting message to the user.\ndocs: Echoes a statement about the documentation.\nhelp: Echoes a list of available commands with brief descriptions.\ndir: Echoes a list of all folders.\nopen: Opens a website in a new tab based on the user's input.\nclear: Clears the terminal screen.\ngit: Opens the GitHub profile of a specific user.\nThe terminal function also includes a greetings option that displays a message to the user when the terminal is first opened.")
             },
@@ -55,14 +59,14 @@
             },
 
             open: function (event) {
-             
+
                 this.echo('key pressed   ' + event);
                 // window.open(event);
                 if (event == 'google') {
                     window.open("https://www.google.com");
                 }
                 else if (event == 'whatsaap') {
-                    window.open("whatsapp://");
+                    window.open("wa.link/a0t6vs");
 
                 }
                 else if (event == 'stngs') {
@@ -86,13 +90,13 @@
                 if (name == 'ketul') {
                     window.open('https://github.com/ketul-pandya');
                 }
-               else if (name == 'ayush') {
+                else if (name == 'ayush') {
                     window.open('https://github.com/13Aluminium');
                 }
-               else if (name == 'kavan') {
+                else if (name == 'kavan') {
                     window.open('https://github.com/KavanGandhi');
                 }
-               else if (name == 'jash') {
+                else if (name == 'jash') {
                     window.open('https://github.com/jashkarangiya ');
                 }
                 else if (name == 'monk') {
@@ -101,12 +105,12 @@
                 else if (name == 'jinesh') {
                     window.open('https://github.com/21-JD ');
                 }
-                else{
+                else {
                     this.echo("please write the correct name");
                 }
 
             },
-            exit:function(){
+            exit: function () {
                 window.close();
             }
 
