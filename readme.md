@@ -16,9 +16,9 @@ Features
 # Usage
 
 To use this terminal, simply open the HTML file in a web browser. The terminal will display a greeting message and you can start using the custom commands by typing them in the terminal prompt.
-Contributions
+# Contributions
 
 If you have any suggestions or improvements for this code, feel free to fork the repository and make a pull request.
-License
+# License
 
 This code is open-source and available under the MIT License.
