@@ -24,8 +24,11 @@
     </style>
 
     <script>
+                    var song = 0;
+
 
         $('body').terminal({
+
             hi: function(){
 
                 this.echo('just testing');
@@ -133,12 +136,20 @@
 
                
             },
+            stop: function(){
+                new Audio().pause();
+            },
             play: function(song){
-                if(song=='riot'){             
-                    new Audio('Riot.mp3').play()
+
+                if(song=='riot'){  
+                    new Audio().pause();
+           
+                    new Audio('Riot.mp3').play();
                 }
                 else if(song=='Avengers' || 'avengers'){
-                    new Audio('Avengers.mp3').play()
+                    new Audio().pause();
+
+                    new Audio('Avengers.mp3').play();
 
                 }
             },
