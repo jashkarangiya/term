@@ -140,16 +140,50 @@
 
                
             },
-            date: function(){
+            day: function(){
                 const date = new Date();
 
-let day = date.getDate();
+let day = date.getDay();
 let month = date.getMonth() + 1;
 let year = date.getFullYear();
 
-// This arrangement can be altered based on how we want the date's format to appear.
-let currentDate = `${day}-${month}-${year}`;
-this.echo(currentDate); // "17-6-2022"
+// // This arrangement can be altered based on how we want the date's format to appear.
+// let currentDate = `${day}-${month}-${year}`;
+// this.echo(currentDate); // "17-6-2022"
+switch (day) {
+    case 1:
+        this.echo("monday")
+        break;
+
+        case 2:
+        this.echo("tuesday")
+        break;
+
+        case 3:
+        this.echo("wednesday")
+        break;
+
+        case 4:
+        this.echo("thursday")
+        break;
+
+        case 5:
+        this.echo("friday")
+        break;
+
+        case 6:
+        this.echo("saturday")
+        break;
+
+        case 7:
+        this.echo("sunday")
+        break;
+
+
+    default:
+        break;
+}
+
             },
             stop: function(){
                 new Audio().pause();
