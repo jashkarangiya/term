@@ -99,7 +99,7 @@ $('body').terminal({
             } else if (name == 'keval') {
                 window.open('https://github.com/kevalhingu');
             } else {
-                this.echo("Assuming direct usernamt retry...");
+                this.echo("Assuming direct username retry...");
                 window.open(`https://github.com/${name}`);
             }
 
@@ -120,24 +120,32 @@ $('body').terminal({
         // Play function for songs
         play: function(song) {
 
-            if (song == 'riot') {
-                new Audio().pause();
-                new Audio('./public/assets/audio/Riot.mp3').play();
 
-            } else if (song == 'Avengers' || 'avengers') {
-                new Audio().pause();
-                new Audio('./public/assets/audio/Avengers.mp3').play();
 
-            } else if (song == 'jash' || 'Jash') {
-                new Audio().pause();
-                new Audio('./public/assets/audio/Riot.mp3').play();
-                // Aa else if ma kai problem che because if I play Jash, Avengers theme song vaage che.
-                // Have a look at it!
+            switch (song) {
 
-            } else {
-                console.log("No such song found!!");
+                case "Avengers":
+                case "avengers":
+                    new Audio().pause();
+                    new Audio('./public/assets/audio/Avengers.mp3').play();
+                    break;
+
+                case "riot":
+                case "Riot":
+                    new Audio().pause();
+                    new Audio('./public/assets/audio/Riot.mp3').play();
+                    break;
+
+                case "Jash":
+                case "jash":
+                    new Audio().pause();
+                    new Audio('./public/assets/audio/Valo.mp3').play();
+                    break;
+
+                default:
+                    console.log("Hello");
+
             }
-
             //Same problem with this one! 
         },
         // Reload function
