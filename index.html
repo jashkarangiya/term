@@ -63,6 +63,7 @@
                     this.echo('  cat - Display the contents of a file.');
                     this.echo('  echo - Print text to the terminal.');
                     this.echo('  open - Open a website in a new tab.');
+                    this.echo('  play - Open a website in a new tab.');
                 },
                 // Dir funtion
                 dir: function() {
@@ -156,9 +157,15 @@
 
                     } else if (song == 'jash' || 'Jash') {
                         new Audio().pause();
-                        new Audio('./public/assets/audio/jash.mp3').play();
+                        new Audio('./public/assets/audio/Riot.mp3').play();
+                        // Aa else if ma kai problem che because if I play Jash, Avengers theme song vaage che.
+                        // Have a look at it!
 
+                    } else {
+                        console.log("No such song found!!");
                     }
+
+                    //Same problem with this one! 
                 },
                 // Reload function
                 ref: function() {
