@@ -36,11 +36,12 @@ $('body').terminal({
             this.echo('  open - Open a website in a new tab.');
             this.echo('  play - Plays a song (type "play {songname}").');
         },
+
         // Dir funtion
         dir: function() {
             this.echo('All folders:\n Semesters');
-
         },
+
         // Resume Function
         resume: function() {
             window.open('resume.pdf');
@@ -64,9 +65,6 @@ $('body').terminal({
                 window.open('https://www.' + event + '.com', '_blank');
 
             }
-
-
-
         },
         // Clear function
         clear: function() {
@@ -80,27 +78,48 @@ $('body').terminal({
         },
         // Function for github
         git: function(name) {
-            if (name == 'ketul') {
-                window.open('https://github.com/ketul-pandya');
-            } else if (name == 'ayush') {
-                window.open('https://github.com/13Aluminium');
-            } else if (name == 'al_term') {
-                window.open('https://github.com/13Aluminium/term')
-            } else if (name == 'al_port') {
-                window.open('https://github.com/13Aluminium/portfolio')
-            } else if (name == 'kavan') {
-                window.open('https://github.com/KavanGandhi');
-            } else if (name == 'jash') {
-                window.open('https://github.com/jashkarangiya ');
-            } else if (name == 'monk') {
-                window.open('https://github.com/krishnanpandya007 ');
-            } else if (name == 'jinesh') {
-                window.open('https://github.com/21-JD ');
-            } else if (name == 'keval') {
-                window.open('https://github.com/kevalhingu');
-            } else {
-                this.echo("Assuming direct username retry...");
-                window.open(`https://github.com/${name}`);
+
+            switch (name.toLowerCase()) {
+                case 'ketul':
+                    window.open('https://github.com/ketul-pandya');
+                    break;
+
+                case 'ayush':
+                    window.open('https://github.com/13Aluminium');
+                    break;
+
+                case 'al_term':
+                    window.open('https://github.com/13Aluminium/term');
+                    break;
+
+                case 'al_port':
+                    window.open('https://github.com/13Aluminium/portfolio');
+                    break;
+
+                case 'kavan':
+                    window.open('https://github.com/KavanGandhi');
+                    break;
+
+                case 'jinesh':
+                    window.open('https://github.com/21-JD');
+                    break;
+
+                case 'keval':
+                    window.open('https://github.com/kevalhingu');
+                    break;
+
+                case 'jash':
+                    window.open('https://github.com/jashkarangiya');
+                    break;
+
+                case 'monk':
+                case 'krishnan':
+                    window.open('https://github.com/krishnanpandya007');
+                    break;
+
+                default:
+                    this.echo("Assuming direct username retry...");
+                    window.open(`https://github.com/${name}`);
             }
 
         },
@@ -120,11 +139,8 @@ $('body').terminal({
         // Play function for songs
         play: function(song) {
 
+            switch (song.toLowerCase()) {
 
-
-            switch (song) {
-
-                case "Avengers":
                 case "avengers":
                     new Audio().pause();
                     new Audio('./public/assets/audio/Avengers.mp3').play();
