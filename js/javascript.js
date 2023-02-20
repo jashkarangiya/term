@@ -159,7 +159,7 @@ $('body').terminal({
                     break;
 
                 default:
-                    console.log("Hello");
+                    console.log("HelloWorld");
 
             }
             //Same problem with this one! 
@@ -169,6 +169,8 @@ $('body').terminal({
             location.reload();
         }
     },
+
+    // Hello 
 
     {
         greetings: 'type help to see more options'
