@@ -162,12 +162,12 @@ $('body').terminal({
         if(song=='riot'){  
             new Audio().pause();
    
-            new Audio('Riot.mp3').play();
+            new Audio('public/assets/audio/Riot.mp3').play();
         }
         else if(song=='Avengers' || 'avengers'){
             new Audio().pause();
 
-            new Audio('Avengers.mp3').play();
+            new Audio('public/assets/audio/Avengers.mp3').play();
 
         }
     },
